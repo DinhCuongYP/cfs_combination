@@ -1,6 +1,10 @@
+import Slideshow from "@/layout/componentLayout/Slideshow/Slideshow";
 
 export default function Home() {
   return (
-    <div>Home Page</div>
+    <div className="">
+      <Slideshow />
+      <div className="h-[1000px]">Content</div>
+    </div>
   )
 }
