@@ -1,4 +1,4 @@
-import Slideshow from "@/layout/componentLayout/Slideshow/Slideshow";
+import Slideshow from '@/layout/componentLayout/Slideshow/Slideshow'
 
 export default function Home() {
   return (
