@@ -1,7 +1,9 @@
 'use client'
 import { React, useState } from 'react'
+import Image from 'next/image'
 
 import Button from '@/component/Button/page'
+import Logo from '@/public/imgs/logo.jpg'
 import Link from 'next/link'
 
 function Header() {
@@ -15,14 +17,16 @@ function Header() {
   ]
   return (
     <header className="w-full shadow-md fixed top-0 left-0 ">
-      <nav className=" md:flex items-center justify-between  bg-transparent hover:bg-[#233067] duration-500 py-4 md:px-10 px-7">
-        <div className=" font-bold text-black text-2xl cursor-pointer hover:text-lime-400 duration-500">
-          <Link href="/">CFS Combination</Link>
+      <nav className=" md:flex items-center justify-between  bg-transparent py-4 md:px-10 px-7">
+        <div className="cursor-pointer">
+          <Link href="/">
+            <Image src={Logo} alt="cfs-logo" width={56} />
+          </Link>
         </div>
 
         <div
           onClick={() => setOpen(!open)}
-          className="bg-[#233067] rounded-lg text-white hover:bg-lime-300 text-4xl absolute right-8 top-4 cursor-pointer md:hidden"
+          className="text-white  text-4xl absolute right-8 top-7 cursor-pointer md:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,16 +43,21 @@ function Header() {
             />
           </svg>
         </div>
+
         <ul
           className={`md:flex md:items-center md:pb-0 absolute md:static md:bg-transparent  bg-white  md:z-auto z-[-1] left-0 w-full md:w-auto transition-all duration-500 ease-in ${
             open ? 'top-20 ' : 'top-[-490px]'
           }`}
         >
           {Links.map((link) => (
-            <li key={link.name} className="md:ml-8 text-xl text-center py-3 lg:py-4">
+            <li
+              onClick={() => setOpen(!open)}
+              key={link.name}
+              className="md:ml-8 text-center py-3 lg:py-4"
+            >
               <Link
                 href={link.link}
-                className=" text-[#233067]  md:text-black font-black text-1xl hover:text-lime-400 duration-500"
+                className=" text-gray-900 font-semibold text-xl hover:text-gray-300 duration-500"
               >
                 {link.name}
               </Link>
@@ -56,7 +65,7 @@ function Header() {
           ))}
           <Button>
             <a
-              className="hidden md:flex bg-indigo-600 text-white font-[Poppins] lg:py-2  lg:px-6 rounded-full lg:rounded  ml-6 lg:ml-8 hover:bg-indigo-400 
+              className="hidden md:flex bg-indigo-600 text-white lg:py-2  lg:px-6 rounded-full lg:rounded  ml-6 lg:ml-8 hover:bg-indigo-400 
               duration-500"
               href="tel:+84898401065"
             >
