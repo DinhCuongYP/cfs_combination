@@ -16,7 +16,7 @@ function Header() {
     { name: 'FQA', link: '/fqa' },
   ]
   return (
-    <header className="w-full shadow-md fixed top-0 left-0 ">
+    <header className="w-full shadow-md fixed top-0 left-0 z-10">
       <nav className=" md:flex items-center justify-between  bg-transparent py-4 md:px-10 px-7">
         <div className="cursor-pointer">
           <Link href="/">

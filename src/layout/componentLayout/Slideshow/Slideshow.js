@@ -28,7 +28,7 @@ function Slideshow() {
     setCurrentIndex(newIndex)
   }
   return (
-    <div className="w-full h-[780px] group">
+    <div className="w-full h-[650px] group">
       <div
         style={{
           backgroundImage: `url(${slides[currentIndex].url})`,
