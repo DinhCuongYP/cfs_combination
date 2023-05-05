@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import Button from '@/component/Button/page'
 import Logo from '@/public/imgs/logo.jpg'
+import Logo2 from '@/public/imgs/Artboard 1.png'
 import Link from 'next/link'
 
 function Header() {
@@ -20,7 +21,7 @@ function Header() {
       <nav className=" md:flex items-center justify-between  bg-transparent py-4 md:px-10 px-7">
         <div className="cursor-pointer">
           <Link href="/">
-            <Image src={Logo} alt="cfs-logo" width={56} />
+            <Image src={Logo2} alt="cfs-logo" width={56} />
           </Link>
         </div>
 
